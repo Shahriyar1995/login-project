@@ -28,7 +28,6 @@ const SignUp = () => {
         }
     }
 
-
     // const focusHandler = (event) => {
     //     setTouch({ ...touch, [event.target.name]: true })
     // }
@@ -53,7 +52,6 @@ const SignUp = () => {
             })
         }
     }
-
 
     return (
         <div>

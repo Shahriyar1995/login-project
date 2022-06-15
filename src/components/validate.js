@@ -1,5 +1,3 @@
-import React from 'react';
-
 const validate = (data) => {
 
     const errors = {};
@@ -41,9 +39,6 @@ const validate = (data) => {
     }
 
     return errors;
-
-
-
 };
 
 export default validate;

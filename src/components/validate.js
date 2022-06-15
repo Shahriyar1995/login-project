@@ -15,7 +15,7 @@ const validate = (data) => {
     } else if (!/\S+@\S+\.\S+/.test(data.email)) {
         errors.email = "Email address is not valid"
     } else {
-        delete email.errors
+        delete errors.email
     }
 
     if (!data.password) {

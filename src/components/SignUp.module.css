@@ -1,0 +1,38 @@
+.container {
+    display         : flex;
+    justify-content : center;
+    background-color: #f9f9f9;
+    min-height      : 100vh;
+    align-items     : center;
+}
+
+.formContainer {
+    border          : 1px solid silver;
+    padding         : 50px;
+    margin          : 50px;
+    width           : fit-content;
+    height          : fit-content;
+    border-radius   : 10px;
+    background-color: #fff;
+}
+
+.header {
+    text-align   : left;
+    margin-bottom: 40px;
+    color        : #1a73e8;
+    font-size    : 1.8rem;
+}
+
+.formField {
+    display       : flex;
+    flex-direction: column;
+    margin-bottom : 10px;
+    height        : 75px;
+}
+
+.formField label {
+    text-align   : left;
+    margin-bottom: 5px;
+    color        : rgb(85, 85, 85);
+    font-size    : 0.9rem;
+}

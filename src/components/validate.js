@@ -38,7 +38,7 @@ const validate = (data) => {
         errors.isAccepted = "Accept our regulations"
     }
 
-    return errors;
+    return errors;   /// ===> The Validate function finally return us an Object <=== ///
 };
 
 export default validate;

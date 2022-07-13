@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import validate from './validate';
+import styles from './SignUp.module.css';
 
 const SignUp = () => {
 
@@ -54,34 +55,34 @@ const SignUp = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={submitHandler}>
-                <h2>Sign Up</h2>
-                <div>
+        <div className={styles.container}>
+            <form onSubmit={submitHandler} className={styles.formContainer}>
+                <h2 className={styles.header}>Sign Up</h2>
+                <div className={styles.formField}>
                     <label>Name</label>
                     <input type="text" name='name' value={data.name} onChange={changeHandler} onFocus={focusHandler} />
                     {errors.name && touch.name && <span>{errors.name}</span>}
                 </div>
 
-                <div>
+                <div className={styles.formField}>
                     <label>Email</label>
                     <input type="email" name='email' value={data.email} onChange={changeHandler} onFocus={focusHandler} />
                     {errors.email && touch.email && <span>{errors.email}</span>}
                 </div>
 
-                <div>
+                <div className={styles.formField}>
                     <label>Password</label>
                     <input type="password" name='password' value={data.password} onChange={changeHandler} onFocus={focusHandler} />
                     {errors.password && touch.password && <span>{errors.password}</span>}
                 </div>
 
-                <div>
+                <div className={styles.formField}>
                     <label>Confirm Password</label>
                     <input type="password" name='confirmPassword' value={data.confirmPassword} onChange={changeHandler} onFocus={focusHandler} />
                     {errors.confirmPassword && touch.confirmPassword && <span>{errors.confirmPassword}</span>}
                 </div>
 
-                <div>
+                <div className={styles.formField}>
                     <label>I accept terms of privacy policy</label>
                     <input type="checkbox" name='isAccepted' value={data.isAccepted} onChange={changeHandler} onFocus={focusHandler} />
                     {errors.isAccepted && touch.isAccepted && <span>{errors.isAccepted}</span>}

@@ -114,36 +114,6 @@
     color: #004aaa;
 }
 
-.checkBoxContainer {
-    display       : flex;
-    font-size     : 0.85rem;
-    flex-direction: row !important;
-    align-items   : center;
-    height        : 20px !important;
-    text-align    : center;
-    gap           : 10px;
-}
-
-input[type="checkbox"] {
-    width        : 18px;
-    height       : 18px;
-    border       : 1px solid #1a73e8;
-    appearance   : none;
-    border-radius: 5px;
-    transition   : all 0.1s ease-in;
-}
-
-input[type="checkbox"]:checked {
-    width           : 18px;
-    height          : 18px;
-    background-color: #1a73e8;
-    border-radius   : 50%;
-}
-
-
-.formField:nth-child(6) label {
-    color: #1a73e8;
-}
 
 @media screen and (max-width:440px) {
     .formContainer {

@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import validate from './validate';
 import styles from './SignUp.module.css';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import notify from './toast';
+import { Link } from 'react-router-dom';
+
 const SignUp = () => {
 
     const [data, setData] = useState({
@@ -16,7 +21,7 @@ const SignUp = () => {
     const [touch, setTouch] = useState({});
 
     useEffect(() => {
-        setErrors(validate(data))
+        setErrors(validate(data, 'signup'))
     }, [data, touch])
 
 
@@ -29,20 +34,16 @@ const SignUp = () => {
         }
     }
 
-    // const focusHandler = (event) => {
-    //     setTouch({ ...touch, [event.target.name]: true })
-    // }
 
     const focusHandler = (event) => {
         setTouch({ [event.target.name]: true })
     }
 
-
     const submitHandler = (event) => {
         event.preventDefault();
         if (!Object.keys(errors).length) {
-            alert('You are the best');
-            console.log(data);
+            notify('You are signed up successfully', 'success');
+
         } else {
             setTouch({
                 name: true,
@@ -51,6 +52,9 @@ const SignUp = () => {
                 confirmPassword: true,
                 isAccepted: true,
             })
+
+            notify('Invalid data', 'error');
+
         }
     }
 
@@ -120,11 +124,11 @@ const SignUp = () => {
                 </div>
 
                 <div className={styles.formButtons}>
-                    <a href="#">Login</a>
+                    <Link to="/login">Login</Link>
                     <button type='submit'>Sign Up</button>
                 </div>
             </form>
-
+            <ToastContainer />
         </div>
     );
 };
